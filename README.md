@@ -12,7 +12,7 @@
 
   <h3 align="center"> Mision TIC</h3>
   <h3 align="center"> Universidad Industrial de Santander</h3>
-  <h4 align="center">Ciclo 3 : Proyecto del curso Desarrollo de Aplicaciones Web.</h4>
+  <h4 align="center">Ciclo 4 : Proyecto del curso Desarrollo de Aplicaciones Web.</h4>
   <h4 align="center">TuDoctorOnline - Agendamiento de servicios médicos</h4>
 
   <p align="center">
@@ -66,6 +66,7 @@
 [![Product Name Screen Shot][product-screenshot]]
 -->
 Es una plataforma para el agendamiento de servicios médicos, permite a los usuarios registrarse de manera gratuita y acceder al sistema de solicitud de citas médicas. La disponibilidad de las citas depende única y exclusivamente de la planeación que realice el administrador sobre los horarios de los médicos. TuDoctorOnline no permite la visualización de información pública, todo queda restringido al inicio de sesión del usuario en el sistema.
+
 La plataforma permitirá a un usuario registrarse en el sistema, de esta forma el usuario tendrá acceso a los horarios disponibles de los médicos. De igual forma permitirá conocer si el usuario ha asistido a una cita o por el contrario la canceló.
 
 Objetivos:
