@@ -65,12 +65,14 @@
 <!--
 [![Product Name Screen Shot][product-screenshot]]
 -->
-Debido a la pandemia por la Covid-19, el Ministerio de Salud en conjunto con MinTic han lanzado una convocatoria para automatizar el proceso de atención de los consultorios de medicina general. Su empresa de desarrollo de software desea participar en la convocatoria y, para esto, deberá presentar una propuesta de desarrollo que permita el registro, reserva y consulta de citas médicas, así como la trazabilidad de pacientes y medicamentos formulados.
+Es una plataforma para el agendamiento de servicios médicos, permite a los usuarios registrarse de manera gratuita y acceder al sistema de solicitud de citas médicas. La disponibilidad de las citas depende única y exclusivamente de la planeación que realice el administrador sobre los horarios de los médicos. TuDoctorOnline no permite la visualización de información pública, todo queda restringido al inicio de sesión del usuario en el sistema.
+La plataforma permitirá a un usuario registrarse en el sistema, de esta forma el usuario tendrá acceso a los horarios disponibles de los médicos. De igual forma permitirá conocer si el usuario ha asistido a una cita o por el contrario la canceló.
 
 Objetivos:
-* Implementar un software web para un consultorio que permita gestionar la información de agendas y citas médicas para doctores, y el registro de historial médico de los pacientes.
-* Implementar la base de datos en un motor de base de datos MySQL
-* Gestionar el proceso de desarrollo mediante una herramienta y aplicando la metodología SCRUM
+* Construir un componente para el inicio de sesión a la plataforma, solo los usuarios con credenciales válidas podrán ingresar.
+* Desarrollar un componente para el registro libre de usuarios en el sistema. Una vez se registra, el usuario puede iniciar sesión inmediatamente y acceder a los servicios de selección de citas médicas. 
+* Implementar un componente para registrar las citas de un usuario, previa validación de las citas disponibles registradas en la plataforma
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +80,7 @@ Objetivos:
 
 ### Tecnologías Usadas
 
-El desarrollo de la aplicacion web (SaludWeb) se llevo a cabo con apoyo de las siguientes tecnologías: .
+El desarrollo de la aplicacion web (TuDoctorOnline) se llevo a cabo con apoyo de las siguientes tecnologías: .
 
 * [![Java.com][Java.com]][Java-url]
 * [![MySql.com][MySql.com]][MySql-url]
@@ -93,9 +95,9 @@ El desarrollo de la aplicacion web (SaludWeb) se llevo a cabo con apoyo de las s
 ## Colaboradores
 El equipo asignado para este proyecto esta compuesto por:
 
+* [Kelly Johana Herrera Andrade](https://github.com/JavierGordillo)
+* [Nicolas Silva Linares](https://github.com/JavierGordillo)
 * [Javier Gordillo](https://github.com/JavierGordillo)
-* [Juan Carlos Chaves](https://github.com/juac888)
-* [Luis Emilio Rojas](https://github.com/lerfast)
 * [Rafael Laverde](https://github.com/Rafaellaverde)
 * [Jose Luis Pulgarin](https://github.com/joselpulgarin)
 
