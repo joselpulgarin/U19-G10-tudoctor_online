@@ -83,12 +83,12 @@ Objetivos:
 
 El desarrollo de la aplicacion web (TuDoctorOnline) se llevo a cabo con apoyo de las siguientes tecnologías: .
 
-* [![Java.com][Java.com]][Java-url]
-* [![MySql.com][MySql.com]][MySql-url]
-* [![Spring.io][Spring.io]][Spring-url]
+* [![NodeJs.com][Node.com]][Node-url]
+* [![MongoDB.com][Mongo.com]][Mongo-url]
+<** [![Spring.io][Spring.io]][Spring-url]
 * [![Bootstrap.com][Bootstrap.com]][Bootstrap-url]
 * [![JQuery.com][JQuery.com]][JQuery-url]
-* [![Thymeleaf.org][Thymeleaf.org]][Thymeleaf-url]
+* [![Thymeleaf.org][Thymeleaf.org]][Thymeleaf-url]*>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -233,8 +233,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [forks-url]: https://github.com/joselpulgarin/consultorio/network/members
 [product-screenshot]: images/screenshot.png
 [diagrama-er]: images/ERDDiagram.png
-[Java.com]: https://img.shields.io/badge/Java-Java-green?style=plastic
-[Java-url]: https://www.java.com/es/
+[Node.com]: https://img.shields.io/badge/NodeJs-339933?style=plastic&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org/en/  
 [Spring.io]: https://img.shields.io/badge/Springboot-6DB33F?style=plastic&logo=springboot&logoColor=white
 [Spring-url]: https://spring.io/projects/spring-boot/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=plastic&logo=bootstrap&logoColor=white
@@ -243,6 +243,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [JQuery-url]: https://jquery.com 
 [Thymeleaf.org]: https://img.shields.io/badge/Thymeleaf-6DB33F?style=plastic&logo=thymeleaf&logoColor=white
 [Thymeleaf-url]: https://www.thymeleaf.org/
-[MySql.com]: https://img.shields.io/badge/MySql-4479A1?style=plastic&logo=mysql&logoColor=white
-[MySql-url]: https://www.mysql.com/
+[Mongo.com]: https://img.shields.io/badge/MongoDB-47A248?style=plastic&logo=mongodb&logoColor=white
+[Mongo-url]: https://www.mongodb.com/
 
