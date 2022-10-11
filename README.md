@@ -96,8 +96,8 @@ El desarrollo de la aplicacion web (TuDoctorOnline) se llevo a cabo con apoyo de
 ## Colaboradores
 El equipo asignado para este proyecto esta compuesto por:
 
-* [Kelly Johana Herrera Andrade](https://github.com/JavierGordillo)
-* [Nicolas Silva Linares](https://github.com/JavierGordillo)
+* [Kelly Johana Herrera Andrade](https://github.com/kly-herrera)
+* [Nicolas Silva Linares](https://github.com/nsilvali)
 * [Javier Gordillo](https://github.com/JavierGordillo)
 * [Rafael Laverde](https://github.com/Rafaellaverde)
 * [Jose Luis Pulgarin](https://github.com/joselpulgarin)
