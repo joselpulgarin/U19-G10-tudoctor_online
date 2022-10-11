@@ -85,10 +85,10 @@ El desarrollo de la aplicacion web (TuDoctorOnline) se llevo a cabo con apoyo de
 
 * [![NodeJs.com][Node.com]][Node-url]
 * [![MongoDB.com][Mongo.com]][Mongo-url]
-<** [![Spring.io][Spring.io]][Spring-url]
+<!--* [![Spring.io][Spring.io]][Spring-url]
 * [![Bootstrap.com][Bootstrap.com]][Bootstrap-url]
 * [![JQuery.com][JQuery.com]][JQuery-url]
-* [![Thymeleaf.org][Thymeleaf.org]][Thymeleaf-url]*>
+* [![Thymeleaf.org][Thymeleaf.org]][Thymeleaf-url]-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
