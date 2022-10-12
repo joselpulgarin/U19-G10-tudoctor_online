@@ -245,4 +245,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [Thymeleaf-url]: https://www.thymeleaf.org/
 [Mongo.com]: https://img.shields.io/badge/MongoDB-47A248?style=plastic&logo=mongodb&logoColor=white
 [Mongo-url]: https://www.mongodb.com/
-
