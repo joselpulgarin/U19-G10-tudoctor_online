@@ -11,4 +11,4 @@ const miPrimeraPromesa=new Promise((resolve,reject) => {
 })
 miPrimeraPromesa.then( )
 console.log( obj.cantidad)
-console.log("obj.id");
+console.log(obj.id);
