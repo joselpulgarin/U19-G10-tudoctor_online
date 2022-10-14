@@ -111,6 +111,7 @@ El equipo asignado para este proyecto esta compuesto por:
 La aplicación esta desarrollada en NodeJS con los packages:
 * Express
 * Mongoose
+
 La persistencia de la información se hara sobre MongoDB.
 
 
