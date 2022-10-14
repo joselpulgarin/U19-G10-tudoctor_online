@@ -108,21 +108,17 @@ El equipo asignado para este proyecto esta compuesto por:
 
 <!-- GETTING STARTED -->
 ## Getting Started
--- En Construcción --
-<!--
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
--->
+Los paso para ejecutar la aplicacion son :
+1. Actualizar el repositorio local
+2. Desde linea de comandos DOS(Ventanita negra) ubicarse dentro del deirectorio ... \U19-G10-tudoctor_online\tuDoctorBack
+     ```cd C:\desarrolloWeb\GitHub\U19-G10-tudoctor_online\tuDoctorBack ```
+  
 
 ### Prerequisites
--- En Construcción --
-<!--
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
--->
+Para ejecutar la aplicacion es necesario tener instalado:
+* NodeJS
+* npm de nodeJS
+* MongoDB
 
 ### Installation
 -- En Construcción --
