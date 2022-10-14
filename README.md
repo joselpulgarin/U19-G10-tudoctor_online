@@ -108,37 +108,34 @@ El equipo asignado para este proyecto esta compuesto por:
 
 <!-- GETTING STARTED -->
 ## Getting Started
-Los paso para ejecutar la aplicacion son :
-1. Actualizar el repositorio local
-2. Desde linea de comandos DOS(Ventanita negra) ubicarse dentro del deirectorio ... \U19-G10-tudoctor_online\tuDoctorBack
-     ```cd C:\desarrolloWeb\GitHub\U19-G10-tudoctor_online\tuDoctorBack ```
-  
+La aplicación esta desarrollada en NodeJS con los packages:
+* Express
+* Mongoose
+La persistencia de la información se hara sobre MongoDB.
+
 
 ### Prerequisites
 Para ejecutar la aplicacion es necesario tener instalado:
 * NodeJS
 * npm de nodeJS
 * MongoDB
+* Postman(para hacer pruebas de los servicios REST)
 
 ### Installation
--- En Construcción --
-<!--
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Los pasos para ejecutar la aplicacion son :
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
--->
+1. Actualizar el repositorio local
+2. Desde linea de comandos DOS(Ventanita negra) ubicarse dentro del deirectorio ... \U19-G10-tudoctor_online\tuDoctorBack
+
+     ```cd C:\desarrolloWeb\GitHub\U19-G10-tudoctor_online\tuDoctorBack ```
+
+3. Descargar dependencias necesarias (en el archivo packages.js ya estan cuales deberian ser)
+
+     ```npm install ```
+ 
+ 4. Ejecutar la aplicación, de modo que subira el servicio y escuchara en el puerto 3000
+
+   ```npm run dev ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
