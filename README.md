@@ -42,8 +42,8 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerrequisitos</a></li>
-        <li><a href="#installation">Instalación</a></li>
+        <li><a href="#Prerrequisitos">Prerrequisitos</a></li>
+        <li><a href="#Instalación">Instalación</a></li>
       </ul>
     </li>
     <li><a href="#usage">Uso</a></li>
@@ -115,14 +115,14 @@ La aplicación esta desarrollada en NodeJS con los packages:
 La persistencia de la información se hara sobre MongoDB.
 
 
-### Prerequisites
+### Prerrequisitos
 Para ejecutar la aplicacion es necesario tener instalado:
 * NodeJS
 * npm de nodeJS
 * MongoDB
 * Postman(para hacer pruebas de los servicios REST)
 
-### Installation
+### Instalación
 _Los pasos para ejecutar la aplicacion son :
 
 1. Actualizar el repositorio local
