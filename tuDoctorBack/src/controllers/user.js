@@ -10,7 +10,11 @@ async function getUsuarios(req = request, res = response) {
 async function getUsuario(req = request, res = response) {
     console.log(req.params.id);
     const usuario = await usuarioDb.findById(req.params.id);
-    res.json(usuario);
+    if (usuario){
+        res.json(usuario);
+    }else{
+        res.status(500).json({ Error: 'Usuario no existe!' });
+    }
 }
 
 async function saveUsuario(req = request, res = response) {
