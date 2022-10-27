@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const {mongoose} = require('./database');
 
 //Initializations
-const app = express()
+const app = express();
 
 //Settings
 app.set('port', process.env.PORT || 3000)

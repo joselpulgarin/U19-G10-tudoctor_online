@@ -2,16 +2,14 @@ const express = require('express');
 const router = express.Router();
 const { sign } = require('jsonwebtoken');
 const usuarioDb = require('../models/user')
+const  {hashSync , genSaltSync, compareSync} = require('bcryptjs');
 
 router.post('/', async (req, res) => {
-    const { email, password } = req.body;
-    console.log(email + ' : ' + password);
-
+    const { numDocumento, password } = req.body;
     //Validacion de usuario Password
-    const usuario = await usuarioDb.findOne({ email });
-    if (usuario && password === usuario.password) {
-
-        sign({ id: usuario._id }, "C4G10-tud0ct0r0nlin3", (error, token) => {
+    const usuario = await usuarioDb.findOne({ numDocumento });
+    if (usuario &&  compareSync(password, usuario.password) ) {
+        sign({ id: usuario._id }, process.env.CLAVE_SECRETA , (error, token) => {
             if (error) {
                 res.status(500).json({ msg: 'Error al generar el token' });
             } else {
