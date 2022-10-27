@@ -1,4 +1,5 @@
 const { request, response, nextFunction } = require('express');
+const { verify } = require('jsonwebtoken');
 
 function verificarToken(req = request, res = response, next = nextFunction){
     try{
@@ -13,8 +14,8 @@ function verificarToken(req = request, res = response, next = nextFunction){
             }
         }
     }catch(error){
-        res.status(400).json(`Error: ${err}`)
+        res.status(400).json(`Error: ${error}`)
     }
 }
 
-module.exports = verificarToken
+module.exports = {verificarToken}

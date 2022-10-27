@@ -5,15 +5,15 @@ const usuarioDb = require('../models/user');
 const { verificarToken } = require('../middleware/seguridad');
 const {getUsuarios, getUsuario, saveUsuario, updateUsuario, deleteUsuario} = require('../controllers/user');
 
-router.get('/', getUsuarios);
+router.get('/',[verificarToken], getUsuarios);
 
-router.get('/:id', getUsuario);
+router.get('/:id',[verificarToken], getUsuario);
 
-router.post('/', saveUsuario);
+router.post('/',[verificarToken], saveUsuario);
 
-router.put('/', updateUsuario);
+router.put('/',[verificarToken], updateUsuario);
 
-router.delete('/:id', deleteUsuario);
+router.delete('/:id',[verificarToken], deleteUsuario);
 
 
 module.exports = router;
