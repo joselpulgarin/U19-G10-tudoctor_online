@@ -17,6 +17,7 @@ app.use(express.json());
 
 //Routes
 app.use('/api/usuarios',require('./routes/user_routes'));
+app.use('/api/login',require('./routes/auth'));
 
 //Static Files
 app.use(express.static(path.join(__dirname,'public')))
