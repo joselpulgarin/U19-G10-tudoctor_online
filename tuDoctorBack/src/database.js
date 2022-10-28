@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb://localhost:27017/prueba_jp';
 
-mongoose.connect(URI)
+mongoose.connect(process.env.DB_MONGO)
 .then(db => console.log('Conectado a la BD'))
 .catch(err => console.error(err));
 
