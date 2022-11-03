@@ -4,20 +4,15 @@ const medicoDb = require('../models/medico');
 const { verificarToken } = require('../middleware/seguridad');
 const {getMedicos, getMedico, saveMedico, updateMedico, deleteMedico} = require('../controllers/medico');
 
-//router.get('/',[verificarToken], getMedicos);
-router.get('/', getMedicos);
+router.get('/',[verificarToken], getMedicos);
 
-//router.get('/:id',[verificarToken], getMedico);
-router.get('/:id', getMedico);
+router.get('/:id',[verificarToken], getMedico);
 
-//router.post('/',[verificarToken], saveMedico);
-router.post('/', saveMedico);
+router.post('/',[verificarToken], saveMedico);
 
-//router.put('/',[verificarToken], updateMedico);
-router.put('/', updateMedico);
+router.put('/',[verificarToken], updateMedico);
 
-//router.delete('/:id',[verificarToken], deleteMedico);
-router.delete('/:id', deleteMedico);
+router.delete('/:id',[verificarToken], deleteMedico);
 
 
 module.exports = router;
