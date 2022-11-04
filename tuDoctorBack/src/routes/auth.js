@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { sign } = require('jsonwebtoken');
 const usuarioDb = require('../models/user')
-const  {hashSync , genSaltSync, compareSync} = require('bcryptjs');
+const  {compareSync} = require('bcryptjs');
 
 router.post('/', async (req, res) => {
     const { email, password } = req.body;
