@@ -27,7 +27,8 @@ export const RegistroSesion = () => {
   // Manejo de formulario con Hook personalizado (sin librerias externas)
   // *******************************************************************
   // variable puede cambiar en le tiempo let
-  let { nombreUsuario, correoUsuario, claveUsuario, dobleEnlace, objeto } = useFormulario<CrearUsuario>(new CrearUsuario("", "", ""))
+  //let { nombreUsuario, correoUsuario, claveUsuario, dobleEnlace, objeto } = useFormulario<CrearUsuario>(new CrearUsuario("", "", ""))
+  let { numDocumento, nombre, apellido, email, telefono, fecNac, password, dobleEnlace, objeto } = useFormulario<CrearUsuario>(new CrearUsuario("", "", "", "", "", new Date(), ""))
 
 
   // ************************************************************************************
@@ -37,13 +38,21 @@ export const RegistroSesion = () => {
   const limpiarCajas = (formulario: HTMLFormElement) => {
     formulario.reset();
 
-    objeto.nombreUsuario = "";
-    objeto.correoUsuario = "";
-    objeto.claveUsuario = "";
+    objeto.numDocumento = "";
+    objeto.nombre = "";
+    objeto.apellido = "";
+    objeto.email = "";
+    objeto.telefono = "";
+    objeto.fecNac = new Date();
+    objeto.password = "";
 
-    formulario.nombreUsuario.value = "";
-    formulario.correoUsuario.value = "";
-    formulario.claveUsuario.value = "";
+    formulario.numDocumento.value = "";
+    formulario.nombre.value = "";
+    formulario.apellido.value = "";
+    formulario.email.value = "";
+    formulario.telefono.value = "";
+    formulario.fecNac.value = new Date();
+    formulario.password.value = "";
 
     formulario.classList.remove("was-validated");
   };
@@ -76,8 +85,8 @@ export const RegistroSesion = () => {
       fh.stopPropagation();
     } else {
       // bloque para consumir el backend
-      const claveCifrada = cifrado.sha512(objeto.claveUsuario);
-      objeto.claveUsuario = claveCifrada;
+      const claveCifrada = cifrado.sha512(objeto.password);
+      objeto.password = claveCifrada;
       const resultado = await ServicioPublico.crearUsuario(objeto);
       if (resultado.tokenMintic) {
         const objJWTRecibido: any = jwtDecode(resultado.tokenMintic);
@@ -133,14 +142,31 @@ export const RegistroSesion = () => {
                         onSubmit={enviarFormulario}
                       >
                         <div className="col-12">
-                          <Form.Group controlId="nombreUsuario">
+                          <Form.Group controlId="numDocumento">
                             <Form.Label>Nombre completo</Form.Label>
                             <Form.Control
                               required
                               type="text"
-                              name="nombreUsuario"
+                              name="numDocumento"
                               className="form-control"
-                              value={nombreUsuario}
+                              value={numDocumento}
+                              onChange={dobleEnlace}
+                            />
+                            <Form.Control.Feedback type="invalid">
+                              Documento es obligatorio
+                            </Form.Control.Feedback>
+                          </Form.Group>
+                        </div>
+
+                        <div className="col-12">
+                          <Form.Group controlId="nombre">
+                            <Form.Label>Nombre</Form.Label>
+                            <Form.Control
+                              required
+                              type="text"
+                              name="nombre"
+                              className="form-control"
+                              value={nombre}
                               onChange={dobleEnlace}
                             />
                             <Form.Control.Feedback type="invalid">
@@ -150,16 +176,32 @@ export const RegistroSesion = () => {
                         </div>
 
                         <div className="col-12">
-                          <Form.Group controlId="correoUsuario">
+                          <Form.Group controlId="apellido">
+                            <Form.Label>Nombre completo</Form.Label>
+                            <Form.Control
+                              required
+                              type="text"
+                              name="apellido"
+                              className="form-control"
+                              value={apellido}
+                              onChange={dobleEnlace}
+                            />
+                            <Form.Control.Feedback type="invalid">
+                              Apellido es obligatorio
+                            </Form.Control.Feedback>
+                          </Form.Group>
+                        </div>
+                        <div className="col-12">
+                          <Form.Group controlId="email">
                             <Form.Label>Correo electrónico</Form.Label>
                             <div className="input-group has-validation">
                               <span className="input-group-text">@</span>
                               <Form.Control
                                 required
                                 type="email"
-                                name="correoUsuario"
+                                name="email"
                                 className="form-control"
-                                value={correoUsuario}
+                                value={email}
                                 onChange={dobleEnlace}
                               />
                               <Form.Control.Feedback type="invalid">
@@ -168,17 +210,47 @@ export const RegistroSesion = () => {
                             </div>
                           </Form.Group>
                         </div>
+                        <div className="col-12">
+                          <Form.Group controlId="telefono">
+                            <Form.Label>Telefono</Form.Label>
+                            <Form.Control
+                              type="text"
+                              name="telefono"
+                              className="form-control"
+                              value={telefono}
+                              onChange={dobleEnlace}
+                            />
+                          </Form.Group>
+                        </div>
+                        <div className="col-12">
+                          <Form.Group controlId="fecNac">
+                            <Form.Label>Fecha de nacimiento</Form.Label>
+                            <div className="input-group has-validation">
+                              <span className="input-group-text">@</span>
+                              <Form.Control
+                                required
+                                type="date"
+                                name="fecNac"
+                                className="form-control"
+                                onChange={dobleEnlace}
+                              />
+                              <Form.Control.Feedback type="invalid">
+                                Fecha de nacimiento es obligatorio
+                              </Form.Control.Feedback>
+                            </div>
+                          </Form.Group>
+                        </div>
 
                         <div className="col-12">
-                          <Form.Group controlId="claveUsuario">
+                          <Form.Group controlId="password">
                             <Form.Label>Contraseña</Form.Label>
                             <Form.Control
                               required
                               type="password"
-                              name="claveUsuario"
+                              name="password"
                               className="form-control"
                               minLength={4}
-                              value={claveUsuario}
+                              value={password}
                               onChange={dobleEnlace}
                             />
                             <Form.Control.Feedback type="invalid">
@@ -195,7 +267,7 @@ export const RegistroSesion = () => {
                               type="password"
                               name="reClaveUsuario"
                               className="form-control"
-                              pattern={claveUsuario}
+                              pattern={password}
                             />
                             <Form.Control.Feedback type="invalid">
                               Contraseñas no coindicen

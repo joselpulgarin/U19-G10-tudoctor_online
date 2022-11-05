@@ -43,9 +43,11 @@ export const PerfilCrear = () => {
             fh.preventDefault();
             fh.stopPropagation();
         } else {
-            const resultado = await ServicioPrivado.peticionPOST(ApiBack.PERFILES_CREAR, objeto);
+            const objToSave = {"nombrePerfil" : objeto.nombrePerfil, "estadoPerfil" : objeto.estadoPerfil };
+            //const resultado = await ServicioPrivado.peticionPOST(ApiBack.PERFILES_CREAR, objeto);
+            const resultado = await ServicioPrivado.peticionPOST(ApiBack.PERFILES_CREAR, objToSave);
 
-            if (resultado.id) {
+            if (resultado.msg) {
                 setEnProceso(false);
                 MensajeToastify("success", "Perfil creado con éxito", 6000);
             } else {

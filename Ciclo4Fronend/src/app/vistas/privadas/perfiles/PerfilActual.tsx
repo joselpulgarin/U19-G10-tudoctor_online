@@ -47,10 +47,10 @@ export const PerfilActual = () => {
             fh.preventDefault();
             fh.stopPropagation();
         } else {
-            const urlActualizar = ApiBack.PERFILES_ACTUALIZAR + "/" + objeto._id;
+            const urlActualizar = ApiBack.PERFILES_ACTUALIZAR + "/";
             const resultado = await ServicioPrivado.peticionPUT(urlActualizar, objeto);
 
-            if (resultado.nuevo) {
+            if (resultado.msg) {
                 setEnProceso(false);
                 MensajeToastify("success", "Perfil actualizado correctamente", 6000);
             } else {
