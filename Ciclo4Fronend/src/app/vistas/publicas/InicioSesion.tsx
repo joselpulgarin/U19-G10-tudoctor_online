@@ -26,17 +26,18 @@ export const InicioSesion = () => {
 
   // Formulario con hooks
   // *******************************************************************
-  let { correoUsuario, claveUsuario, dobleEnlace, objeto } = useFormulario<CrearUsuario>(new CrearUsuario("", "", ""));
+  //let { correoUsuario, claveUsuario, dobleEnlace, objeto } = useFormulario<CrearUsuario>(new CrearUsuario("", "", ""));
+  let { email,  password, dobleEnlace, objeto } = useFormulario<CrearUsuario>(new CrearUsuario("", "", "", "", "", new Date(), ""))
 
   // Función flecha para limpiar cajas
   const limpiarCajas = (formulario: HTMLFormElement) => {
     formulario.reset();
 
-    objeto.correoUsuario = "";
-    objeto.claveUsuario = "";
+    objeto.email = "";
+    objeto.password = "";
 
-    formulario.correoUsuario.value = "";
-    formulario.claveUsuario.value = "";
+    formulario.email.value = "";
+    formulario.password.value = "";
 
     formulario.classList.remove("was-validated");
   };
@@ -54,12 +55,12 @@ export const InicioSesion = () => {
       fh.preventDefault();
       fh.stopPropagation();
     } else {
-      const claveCifrada = cifrado.sha512(objeto.claveUsuario);
-      objeto.claveUsuario = claveCifrada;
+      const claveCifrada = cifrado.sha512(objeto.password);
+      objeto.password = claveCifrada;
       const resultado = await ServicioPublico.iniciarSesion(objeto);
-
-      if (resultado.tokenMintic) {
-        const objJWTRecibido: any = jwtDecode(resultado.tokenMintic);
+      console.log(resultado);
+      if (resultado.token) {
+        const objJWTRecibido: any = jwtDecode(resultado.token);
         const usuarioCargado = new MiSesion(
           objJWTRecibido.codUsuario,
           objJWTRecibido.correo,
@@ -67,7 +68,7 @@ export const InicioSesion = () => {
         );
         actualizar(usuarioCargado);
 
-        localStorage.setItem("tokenMintic", resultado.tokenMintic);
+        localStorage.setItem("tokenMintic", resultado.token);
         navigate("/dashboard");
         setEnProceso(false);
       } else {
@@ -113,16 +114,16 @@ export const InicioSesion = () => {
                         className="row g-3"
                       >
                         <div className="col-12">
-                          <Form.Group controlId="correoUsuario">
+                          <Form.Group controlId="email">
                             <Form.Label>Correo electrónico</Form.Label>
                             <div className="input-group has-validation">
                               <span className="input-group-text">@</span>
                               <Form.Control
                                 required
                                 type="email"
-                                name="correoUsuario"
+                                name="email"
                                 className="form-control"
-                                value={correoUsuario}
+                                value={email}
                                 onChange={dobleEnlace}
                               />
                               <Form.Control.Feedback type="invalid">
@@ -133,15 +134,15 @@ export const InicioSesion = () => {
                         </div>
 
                         <div className="col-12">
-                          <Form.Group controlId="claveUsuario">
+                          <Form.Group controlId="password">
                             <Form.Label>Contraseña</Form.Label>
                             <Form.Control
                               required
                               type="password"
-                              name="claveUsuario"
+                              name="password"
                               className="form-control"
                               minLength={4}
-                              value={claveUsuario}
+                              value={password}
                               onChange={dobleEnlace}
                             />
                             <Form.Control.Feedback type="invalid">
